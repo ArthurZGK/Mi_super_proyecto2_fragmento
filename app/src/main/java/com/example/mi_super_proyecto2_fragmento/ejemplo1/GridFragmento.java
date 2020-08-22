@@ -1,4 +1,4 @@
-package com.example.mi_super_proyecto2_fragmento;
+package com.example.mi_super_proyecto2_fragmento.ejemplo1;
 
 import android.os.Bundle;
 import android.view.LayoutInflater;
@@ -10,6 +10,8 @@ import android.widget.GridView;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
+
+import com.example.mi_super_proyecto2_fragmento.R;
 
 public class GridFragmento extends Fragment {
     @Nullable

@@ -5,15 +5,14 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context=".MainActivity">
+    tools:context=".ejemplo1.MainActivity">
     <Spinner
-        android:entries="@array/tipo"
+        android:id="@+id/mispinner"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content" />
-    <fragment
+        android:layout_height="wrap_content"
+        android:entries="@array/tipo" />
+    <FrameLayout
+        android:id="@+id/fragmento"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:name="com.example.mi_super_proyecto2_fragmento.GridFragmento"
-        android:id="@+id/mifragment"
-        />
+        android:layout_height="match_parent" />
 </LinearLayout>
