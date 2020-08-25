@@ -22,18 +22,24 @@ public class AdapterCorreo extends RecyclerView.Adapter<AdapterCorreo.ViewHolder
         View v = inflador.inflate(R.layout.list_item_correo, parent, false);
         return new ViewHolder(v);
     }
+
     @Override
     public void onBindViewHolder(ViewHolder holder, final int i) {
         holder.titulo.setText(datos[i].getDe());
         holder.subtitutlo.setText(datos[i].getAsunto());
-        holder.itemView.setOnClickListener(new View.OnClickListener(){
+        holder.itemView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(micontext, DetalleCorreo.class);
-                intent.putExtra("texto",datos[i].getTexto());
-                intent.putExtra("de",datos[i].getDe());
-                intent.putExtra("asunto",datos[i].getAsunto());
-micontext.startActivity(intent);
+                intent.putExtra("texto", datos[i].getTexto());
+                intent.putExtra("de", datos[i].getDe());
+                intent.putExtra("asunto", datos[i].getAsunto());
+                try {
+                    ((MainFragmentCorreo) micontext).mostrarDetalle(datos[i].getTexto());
+                } catch (Exception e){
+                    micontext.startActivity(intent);
+                }
+
             }
         });
     }
